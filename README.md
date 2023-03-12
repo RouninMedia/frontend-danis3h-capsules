@@ -29,7 +29,9 @@ A **Danis³h Capsule Reference** on the front-end may be created in javascript u
 A single line of JavaScript will create a **Danis³h Capsule Reference** from a ***Capsule Reference Literal***:
 
 ```js
-const amyCapsuleReference = document.createComment('<[ <CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening"> ]>');
+const myCapsuleReference = document.createComment(
+  '<[ <CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening"> ]>'
+);
 ```
 
 ### Capsule Reference Object
