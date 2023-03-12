@@ -11,8 +11,25 @@ On the *Front End*, within an HTML Document, the corresponding **Danis³h Capsul
 <!--<[ <CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening"> ]>-->
 ```
 
-and may be created like this:
+and may be created in javascript using *either* a ***Capsule Reference Literal***, like this:
 
 ```js
 const ashivaMenuNavigation = document.createComment('<[ <CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening"> ]>');
+```
+
+or by using a ***Capsule Reference Object***, like this:
+
+```js
+let ashivaMenuNavigation = {
+  publisher: 'Ash',
+  imprint: [],
+  capsuleName: 'Ash_Toggle_Input',
+  strongModifiers: [],
+  attributes: {
+    position: 'on'
+  },
+  dataset: {},
+  directives: {},
+  lightModifiers: []
+};
 ```
