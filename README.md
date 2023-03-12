@@ -9,9 +9,8 @@ On the *Front End*, within an HTML Document, the corresponding **Danis³h Capsul
 
 ```html
 <!--<[ <Capsule_Examples:::CX_My_Capsule Season="Spring" time="evening"> ]>-->
-<!--<[ <<Capsule_Examples> CX_My_Capsule Season="Spring" time="evening"> ]>-->
 <!--<[ <[Capsule_Examples] CX_My_Capsule Season="Spring" time="evening"> ]>-->
-<!--<[ <{Capsule_Examples} CX_My_Capsule Season="Spring" time="evening"> ]>-->
+<!--<[ <@Capsule_Examples CX_My_Capsule Season="Spring" time="evening"> ]>-->
 ```
 
 and may be created like this:
