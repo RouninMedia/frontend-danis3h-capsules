@@ -36,7 +36,34 @@ const myCapsuleReference = document.createComment(
 
 ### Capsule Reference Object
 
-A ***Capsule Reference Object*** looks like this:
+***Capsule Reference Objects*** present the information in the **standard notation** as an object:
+
+    Capsule_Examples:::CX_My_Capsule
+
+corresponds to:
+
+```js
+let myCapsuleReferenceObject = {
+  capsuleName: 'CX_My_Capsule',
+  publisher: 'Capsule_Examples'
+};
+```
+or, including all keys:
+
+```js
+let myCapsuleReferenceObject = {
+  capsuleName: 'CX_My_Capsule',
+  publisher: 'Capsule_Examples',
+  imprint: [],
+  strongModifiers: [],
+  attributes: {},
+  dataset: {},
+  directives: {},
+  lightModifiers: []
+};
+```
+
+corresponds to:
 
 ```js
 let myCapsuleReferenceObject = {
@@ -54,3 +81,5 @@ let myCapsuleReferenceObject = {
   }
 };
 ```
+
+settingslisted="StrongModifiers classList attributes dataSet Directives LightModifiers"
