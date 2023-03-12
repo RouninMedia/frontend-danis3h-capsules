@@ -1,2 +1,18 @@
-# frontend-danis3h-capsules
-Danis3h Capsules can be deployed anywhere. Here's how they are deployed on the Front End.
+# Frontend Danis³h Capsules
+**Danis³h Capsules** can be deployed anywhere. Here's how they are deployed on the Front End.
+
+Standard notation for a capsule might be:
+
+    Capsule_Examples:::CX_My_Capsule::Season:Spring##time:evening
+
+On the *Front End*, within an HTML Document, the corresponding **Danis³h Capsule Reference** looks like this:
+
+```html
+<!--<[ <Capsule_Examples:::CX_My_Capsule Season="Spring" time="evening"> ]>-->
+```
+
+and may be created like this:
+
+```js
+const ashivaMenuNavigation = document.createComment('<[ <Capsule_Examples:::CX_My_Capsule Season="Spring" time="evening"> ]>');
+```
