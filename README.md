@@ -8,9 +8,7 @@ Standard notation for a capsule might be:
 On the *Front End*, within an HTML Document, the corresponding **Danis³h Capsule Reference** looks like this:
 
 ```html
-<!--<[ <Capsule_Examples:::CX_My_Capsule Season="Spring" time="evening"> ]>-->
-<!--<[ <[Capsule_Examples] CX_My_Capsule Season="Spring" time="evening"> ]>-->
-<!--<[ <@Capsule_Examples CX_My_Capsule Season="Spring" time="evening"> ]>-->
+<!--<[ <CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening"> ]>-->
 ```
 
 and may be created like this:
