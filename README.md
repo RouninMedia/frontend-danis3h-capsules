@@ -62,8 +62,20 @@ let myCapsuleReferenceObject = {
   lightModifiers: []
 };
 ```
-
+    Capsule_Examples:::CX_My_Capsule::Season:Spring##time:evening
+    
 corresponds to:
+
+
+```js
+let myCapsuleReferenceObject = {
+  capsuleName: 'CX_My_Capsule',
+  publisher: 'Capsule_Examples',
+  strongModifiers: {Season: 'Spring'},
+  lightModifiers: {time: 'evening'}
+};
+```
+or, including all keys:
 
 ```js
 let myCapsuleReferenceObject = {
