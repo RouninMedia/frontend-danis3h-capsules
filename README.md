@@ -112,33 +112,49 @@ let myCapsuleReferenceObject = {
   CapsuleName: 'Ash_Toggle_Input',
   CapsulePublisher: 'Ash',
   CapsuleImprint: ['Standard_UI', 'TouchScreen'],
+  
   StrongModifiers: {
     Position: 'Off'
   },
+  
   classList: [
     'test-class-1',
     'test-class-2',
     'test-class-3',
-    'test-class-4]'
+    'test-class-4'
   ],
+  
   attributes: {
     'test-attribute-1': 'test-value-1'
     'test-attribute-2': 'test-value-2'
     'test-attribute-3': 'test-attribute-3'
-    'test-attribute-4': '---',
-    'test-attribute-5': '___'
+    'test-attribute-4': '',
+    'test-attribute-5': '⊤'
   },
+  
   dataSet: {
-    'data-test-data-1': 'test-value-1',
-    'data-test-data-2': 'test-value-2',
-    'data-test-data-3': 'data-test-data-3'
-    'data-test-data-4:
-    'data-test-data-5
-    'data-test-data-6
+    'test-data-1': 'test-value-1',
+    'test-data-2': 'test-value-2',
+    'test-data-3': 'data-test-data-3'
+    'test-data-4': '',
+    'test-data-5': '⊤',
+    'test-data-6': '⊤'
   },
-  Directives: {},
+  
+  Directives: {
+    pagecontext: 'pagefix',
+    settingslisted: [
+      StrongModifiers,
+      classList,
+      attributes,
+      dataSet,
+      Directives,
+      LightModifiers
+    ]
+  },
+  
   LightModifiers: {
-    time: 'evening'
+    theme: 'light'
   }
 };
 ```
