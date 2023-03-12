@@ -42,9 +42,9 @@ or by using a ***Capsule Reference Object***, like this:
 
 ```js
 let myCapsuleReferenceObject = {
+  capsuleName: 'CX_My_Capsule',
   publisher: 'Capsule_Examples',
   imprint: [],
-  capsuleName: 'CX_My_Capsule',
   strongModifiers: {
     Season: 'Spring'
   },
