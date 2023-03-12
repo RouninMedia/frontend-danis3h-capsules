@@ -42,7 +42,7 @@ Note that, with the (current) exception of the Danis³h entry:
 
     "Capsule": true
     
-this JS object _corrresponds exactly_ to its Capsule declaration equivalent within a hardcoded Danis³h Markup Cell.
+this JS object _exactly represents_ its Capsule declaration equivalent within a hardcoded Danis³h Markup Cell.
 
 Each can be transformed into the other via the methods `JSON.parse()` and `JSON.stringify()`.
 
