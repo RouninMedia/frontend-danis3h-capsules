@@ -36,7 +36,15 @@ const myCapsuleReference = document.createComment(
 
 ### Capsule Reference Object
 
-***Capsule Reference Objects*** present the information in the **standard notation** as an object:
+***Capsule Reference Objects*** present the information in the **standard notation** as a JavaScript object.
+
+Note that, with the (current) exception of the Danis³h entry:
+
+    "Capsule": true
+    
+this JS object _corrresponds exactly_ to its Capsule declaration equivalent within a hardcoded Danis³h Markup Cell.
+
+Each can be transformed into the other via the methods `JSON.parse()` and `JSON.stringify()`.
 
 #### Example 1:
 
