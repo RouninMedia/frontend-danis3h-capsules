@@ -46,23 +46,23 @@ corresponds to:
 
 ```js
 let myCapsuleReferenceObject = {
-  capsuleName: 'CX_My_Capsule',
-  publisher: 'Capsule_Examples'
+  CapsuleName: 'CX_My_Capsule',
+  CapsulePublisher: 'Capsule_Examples'
 };
 ```
 or, including all keys:
 
 ```js
 let myCapsuleReferenceObject = {
-  capsuleName: 'CX_My_Capsule',
-  publisher: 'Capsule_Examples',
-  imprint: [],
-  strongModifiers: [],
+  CapsuleName: 'CX_My_Capsule',
+  CapsulePublisher: 'Capsule_Examples',
+  CapsuleImprint: [],
+  StrongModifiers: [],
   classList: [],
   attributes: {},
-  dataset: {},
-  directives: {},
-  lightModifiers: []
+  dataSet: {},
+  Directives: {},
+  LightModifiers: []
 };
 ```
 
@@ -75,27 +75,27 @@ corresponds to:
 
 ```js
 let myCapsuleReferenceObject = {
-  capsuleName: 'CX_My_Capsule',
-  publisher: 'Capsule_Examples',
-  strongModifiers: {Season: 'Spring'},
-  lightModifiers: {time: 'evening'}
+  CapsuleName: 'CX_My_Capsule',
+  CapsulePublisher: 'Capsule_Examples',
+  StrongModifiers: {Season: 'Spring'},
+  LightModifiers: {time: 'evening'}
 };
 ```
 or, including all keys:
 
 ```js
 let myCapsuleReferenceObject = {
-  capsuleName: 'CX_My_Capsule',
-  publisher: 'Capsule_Examples',
-  imprint: [],
-  strongModifiers: {
+  CapsuleName: 'CX_My_Capsule',
+  CapsulePublisher: 'Capsule_Examples',
+  CapsuleImprint: [],
+  StrongModifiers: {
     Season: 'Spring'
   },
   classList: [],
   attributes: {},
-  dataset: {},
-  directives: {},
-  lightModifiers: {
+  dataSet: {},
+  Directives: {},
+  LightModifiers: {
     time: 'evening'
   }
 };
@@ -109,10 +109,10 @@ corresponds to:
 
 ```js
 let myCapsuleReferenceObject = {
-  capsuleName: 'Ash_Toggle_Input',
-  publisher: 'Ash',
-  imprint: ['Standard_UI', 'TouchScreen'],
-  strongModifiers: {
+  CapsuleName: 'Ash_Toggle_Input',
+  CapsulePublisher: 'Ash',
+  CapsuleImprint: ['Standard_UI', 'TouchScreen'],
+  StrongModifiers: {
     Position: 'Off'
   },
   classList: [
@@ -128,7 +128,7 @@ let myCapsuleReferenceObject = {
     'test-attribute-4': '---',
     'test-attribute-5': '___'
   },
-  dataset: {
+  dataSet: {
     'data-test-data-1': 'test-value-1',
     'data-test-data-2': 'test-value-2',
     'data-test-data-3': 'data-test-data-3'
@@ -136,8 +136,8 @@ let myCapsuleReferenceObject = {
     'data-test-data-5
     'data-test-data-6
   },
-  directives: {},
-  lightModifiers: {
+  Directives: {},
+  LightModifiers: {
     time: 'evening'
   }
 };
