@@ -88,13 +88,16 @@ let myCapsuleReferenceObject = {
   CapsuleName: 'CX_My_Capsule',
   CapsulePublisher: 'Capsule_Examples',
   CapsuleImprint: [],
+  
   StrongModifiers: {
     Season: 'Spring'
   },
+  
   classList: [],
   attributes: {},
   dataSet: {},
   Directives: {},
+  
   LightModifiers: {
     time: 'evening'
   }
