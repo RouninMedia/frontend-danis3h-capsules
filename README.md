@@ -41,16 +41,18 @@ const myCapsuleReference = document.createComment(
 or by using a ***Capsule Reference Object***, like this:
 
 ```js
-let ashivaMenuNavigation = {
-  publisher: 'Ash',
+let myCapsuleReferenceObject = {
+  publisher: 'Capsule_Examples',
   imprint: [],
-  capsuleName: 'Ash_Toggle_Input',
-  strongModifiers: [],
-  attributes: {
-    position: 'on'
+  capsuleName: 'CX_My_Capsule',
+  strongModifiers: {
+    Season: 'Spring'
   },
+  attributes: {},
   dataset: {},
   directives: {},
-  lightModifiers: []
+  lightModifiers: {
+    time: 'evening'
+  }
 };
 ```
