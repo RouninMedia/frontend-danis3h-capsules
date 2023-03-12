@@ -14,5 +14,5 @@ On the *Front End*, within an HTML Document, the corresponding **Danis³h Capsul
 and may be created like this:
 
 ```js
-const ashivaMenuNavigation = document.createComment('<[ <Capsule_Examples:::CX_My_Capsule Season="Spring" time="evening"> ]>');
+const ashivaMenuNavigation = document.createComment('<[ <CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening"> ]>');
 ```
