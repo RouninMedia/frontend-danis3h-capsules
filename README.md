@@ -42,7 +42,7 @@ Note that, with the (current) exception of the Danis³h entry:
 
     "Capsule": true
     
-this JS object _exactly represents_ its Capsule declaration equivalent within a hardcoded Danis³h Markup Cell.
+this JS object _corresponds exactly_ to its Capsule declaration equivalent within a hardcoded Danis³h Markup Cell.
 
 Each can be transformed into the other via the methods `JSON.parse()` and `JSON.stringify()`.
 
@@ -50,7 +50,7 @@ Each can be transformed into the other via the methods `JSON.parse()` and `JSON.
 
     Capsule_Examples:::CX_My_Capsule
 
-corresponds to:
+becomes:
 
 ```js
 let myCapsuleReferenceObject = {
@@ -78,7 +78,7 @@ let myCapsuleReferenceObject = {
 
     Capsule_Examples:::CX_My_Capsule::Season:Spring##time:evening
     
-corresponds to:
+becomes:
 
 
 ```js
@@ -116,7 +116,7 @@ let myCapsuleReferenceObject = {
 
     Ash:::Standard_UI:::TouchScreen:::Ash_Toggle_Input::Position:Off++class:test-class-1:test-class-2:test-class-3:test-class-4++test-attribute-1:test-value-1++test-attribute-2:test-value-2++test-attribute-3:test-attribute-3++test-attribute-4:++test-attribute-5++data-test-data-1:test-value-1++data-test-data-2:test-value-2++data-test-data-3:data-test-data-3++data-test-data-4:++data-test-data-5++data-test-data-6&&pagecontext:pagefix&&settingslisted:(StrongModifiers|classList|attributes|dataSet|Directives|LightModifiers)##theme:light
 
-corresponds to:
+becomes:
 
 ```js
 let myCapsuleReferenceObject = {
