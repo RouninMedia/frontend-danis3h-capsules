@@ -38,6 +38,8 @@ const myCapsuleReference = document.createComment(
 
 ***Capsule Reference Objects*** present the information in the **standard notation** as an object:
 
+#### Example 1:
+
     Capsule_Examples:::CX_My_Capsule
 
 corresponds to:
@@ -56,12 +58,16 @@ let myCapsuleReferenceObject = {
   publisher: 'Capsule_Examples',
   imprint: [],
   strongModifiers: [],
+  classList: [],
   attributes: {},
   dataset: {},
   directives: {},
   lightModifiers: []
 };
 ```
+
+#### Example 2:
+
     Capsule_Examples:::CX_My_Capsule::Season:Spring##time:evening
     
 corresponds to:
@@ -85,6 +91,7 @@ let myCapsuleReferenceObject = {
   strongModifiers: {
     Season: 'Spring'
   },
+  classList: [],
   attributes: {},
   dataset: {},
   directives: {},
@@ -94,4 +101,44 @@ let myCapsuleReferenceObject = {
 };
 ```
 
-settingslisted="StrongModifiers classList attributes dataSet Directives LightModifiers"
+#### Example 3:
+
+    Ash:::Standard_UI:::TouchScreen:::Ash_Toggle_Input::Position:Off++class:test-class-1:test-class-2:test-class-3:test-class-4++test-attribute-1:test-value-1++test-attribute-2:test-value-2++test-attribute-3:test-attribute-3++test-attribute-4:++test-attribute-5++data-test-data-1:test-value-1++data-test-data-2:test-value-2++data-test-data-3:data-test-data-3++data-test-data-4:++data-test-data-5++data-test-data-6&&pagecontext:pagefix&&settingslisted:(StrongModifiers|classList|attributes|dataSet|Directives|LightModifiers)##theme:light
+
+corresponds to:
+
+```js
+let myCapsuleReferenceObject = {
+  capsuleName: 'Ash_Toggle_Input',
+  publisher: 'Ash',
+  imprint: ['Standard_UI', 'TouchScreen'],
+  strongModifiers: {
+    Position: 'Off'
+  },
+  classList: [
+    'test-class-1',
+    'test-class-2',
+    'test-class-3',
+    'test-class-4]'
+  ],
+  attributes: {
+    'test-attribute-1': 'test-value-1'
+    'test-attribute-2': 'test-value-2'
+    'test-attribute-3': 'test-attribute-3'
+    'test-attribute-4': '---',
+    'test-attribute-5': '___'
+  },
+  dataset: {
+    'data-test-data-1': 'test-value-1',
+    'data-test-data-2': 'test-value-2',
+    'data-test-data-3': 'data-test-data-3'
+    'data-test-data-4:
+    'data-test-data-5
+    'data-test-data-6
+  },
+  directives: {},
+  lightModifiers: {
+    time: 'evening'
+  }
+};
+```
