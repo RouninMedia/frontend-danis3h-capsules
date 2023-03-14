@@ -41,7 +41,7 @@ A single line of JavaScript will create a **Danis³h Capsule Reference** from a 
 
 ```js
 const myCapsuleReference = document.createComment(
-  '<[ <CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening"> ]>'
+  '[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening">]'
 );
 ```
 
