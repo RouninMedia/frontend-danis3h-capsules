@@ -16,6 +16,14 @@ On the *Front End*, within an HTML or SVG Document, the corresponding **Danis³h
 ```html
 <!--<[ <CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" > ]>-->
 ```
+
+**N.B.** There is more to this **Capsule Reference** than there appears to be:
+
+ 1) the reference contains an *implicit* inline **CapsuleManifest**:
+
+     `[#][Markup="CX_My_Capsule", Styles="CX_My_Capsule", Scripts="CX_My_Capsule", Data="CX_My_Capsule"]`
+     
+ 2) the reference also contains an *implicit* **PrimeCell**: `[@]CX_My_Capsule` (which points to: `/code/markup/cx-my-capsule-markup--html.json`)
 ______
 
 ## Creating a Danis³h Capsule Reference on the Frontend
