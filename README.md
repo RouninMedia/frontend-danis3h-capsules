@@ -11,10 +11,10 @@ Here's how they are deployed on the Front End.
 _____
 
 ## Danis³h Capsule Reference on the Frontend
-On the *Front End*, within an HTML Document, the corresponding **Danis³h Capsule Reference** looks like this:
+On the *Front End*, within an HTML or SVG Document, the corresponding **Danis³h Capsule Reference** looks like this:
 
 ```html
-<!--<[ <CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening"> ]>-->
+<!--<[ <CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" > ]>-->
 ```
 ______
 
