@@ -3,8 +3,8 @@
 
 Here's how they are deployed on the Front End.
 
-## Danis³h Capsule Standard Notation
-Standard notation for a capsule might be:
+## Danis³h Capsule Standard Text Notation
+**Standard Text Notation** for a capsule looks like this:
 
     Capsule_Examples:::CX_My_Capsule::Season:Spring##time:evening
     
