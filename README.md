@@ -15,8 +15,7 @@ On the *Front End*, within an HTML or SVG Document, the corresponding **Danis³h
 
 ```html
 
-<!--<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening">-->
-<!--<[ <CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening"> ]>-->
+<!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening">]-->
 ```
 
 **N.B.** Note that there is *more* to this **Capsule Reference** than there appears to be:
