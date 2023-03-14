@@ -32,7 +32,7 @@ ______
 ## Creating a Danis³h Capsule Reference on the Frontend
 A **Danis³h Capsule Reference** on the front-end may be created in javascript using *either* of two approaches.
 
- - via a ***Capsule Reference Literal*** e.g. `<[ <CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening"> ]>`
+ - via a ***Capsule Reference Literal*** e.g. `[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening">]`
  - via a ***Capsule Reference Object***
 
 ### Capsule Reference Literal
