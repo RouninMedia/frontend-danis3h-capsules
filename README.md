@@ -36,7 +36,7 @@ const myCapsuleReference = document.createComment(
 
 ### Capsule Reference Object
 
-***Capsule Reference Objects*** present the information in the **standard notation** as a JavaScript object.
+***Capsule Reference Objects*** present the information from the **standard notation** as a JavaScript object.
 
 Note that, with the (current) exception of the Danis³h entry:
 
