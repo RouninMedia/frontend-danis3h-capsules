@@ -24,9 +24,9 @@ On the *Front End*, within an HTML or SVG Document, the corresponding **Danis³h
 
      `[#][Markup="CX_My_Capsule", Styles="CX_My_Capsule", Scripts="CX_My_Capsule", Data="CX_My_Capsule"]`
      
- 2) the reference *also* contains an *implicit* **PrimeCell**:
+ 2) the reference *also* contains an *implicit* **Named Cell** (which essentially acts as a *PrimeCell*):
      
-     `[@]CX_My_Capsule` (which points to: `/.assets/capsules/cx-my-capsule/code/markup/cx-my-capsule--html.json`)
+     `[@]CX_My_Capsule` // *points to:* `/.assets/capsules/cx-my-capsule/code/markup/cx-my-capsule--html.json`
 ______
 
 ## Creating a Danis³h Capsule Reference on the Frontend
