@@ -63,7 +63,10 @@ though, of course, normally we wouldn't include the _Implicit Data_, so we would
 ### A short note about the differences between PrimeCells in *file-based* and *inline* CapsuleManifests
 In inline **CapsuleManifests**, as in file-based **CapsuleManifests**, the **PrimeCell** will commonly have a value of _Markup_ or _Vectors_ or _Data_.
 
-Unlike in file-based **CapsuleManifests**, however, in an *HTML Document* a CapsuleReference without a declared **PrimeCell** will be *assumed* to contain the implicit **PrimeCell** `[@]Markup` and in an *SVG Document* a CapsuleReference without a **PrimeCell** will be *assumed* to contain the implicit **PrimeCell** `[@]Vectors`.
+Unlike in file-based **CapsuleManifests**, however:
+
+ - in an *HTML Document* a CapsuleReference without a declared **PrimeCell** will be *assumed* to contain the implicit **PrimeCell** `[@]Markup`
+ - in an *SVG Document* a CapsuleReference without a **PrimeCell** will be *assumed* to contain the implicit **PrimeCell** `[@]Vectors`
 
 Consequently, in an inline **CapsuleManifest**, the **PrimeCell**  will need to be explicitly named, *only* if:
 
@@ -101,9 +104,6 @@ And, finally, these three references (note the first example with no declared **
 
 
 1) Compare syntax for [@]
-
-In a file-based **CapsuleManifest**, *PrimeCell* can be one of three: Markup | Vectors | Data
-In a markup-based **CapsuleManifest**, *PrimeCell* will be assumed to be Markup in HTML 
 
 ______
 
