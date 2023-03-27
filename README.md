@@ -24,17 +24,26 @@ On the *Front End*, within an HTML or SVG Document, the corresponding **Danis³h
 
      `[#][Markup="CX_My_Capsule", Styles="CX_My_Capsule", Scripts="CX_My_Capsule", Data="CX_My_Capsule"]`
      
- 2) the reference *also* contains an *implicit* **Named Cell** (which essentially acts as a *PrimeCell*):
+ 2) the reference *also* contains an *implicit* **Named Cell** - since everything under discussion here is inline markup, any *implicit Named Cell* will essentially perform the same job as the "silent" *PrimeCell* in a file-based **CapsuleManifest**):
      
      `[@]CX_My_Capsule` points to: `/.assets/capsules/cx-my-capsule/code/markup/cx-my-capsule--html.json`
      
 Hence, written out in full, the **Danis³h Capsule Reference** above looks like this:
 
-
 ```html
 
 <!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [#][Markup="CX_My_Capsule", Styles="CX_My_Capsule", Scripts="CX_My_Capsule", Data="CX_My_Capsule"] [@]CX_My_Capsule>]-->
 ```
+
+If the **Named Cell** is something other than _Markup_ (in HTML documents) or _Vectors_ (in SVG Documents) it will need to be explicitly named:
+
+```html
+
+<!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Script="CX_My_Capsule">]-->
+```
+
+1) Compare syntax for [@]
+2) THINK OF ANOTHER TERM FOR: **NAMED CELL**
 
 ______
 
