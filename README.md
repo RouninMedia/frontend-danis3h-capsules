@@ -4,7 +4,7 @@
 Here's how they are deployed on the Front End.
 
 ## Danis³h Capsule Standard Text Notation
-**Standard Text Notation** describing a capsule looks like this:
+The **Standard Text Notation** to describe a capsule looks like this:
 
     Capsule_Examples:::CX_My_Capsule::Season:Spring##time:evening
     
@@ -51,6 +51,10 @@ Hence, written out in full, the **Danis³h Capsule Reference** above looks like 
   >
 ]-->
 ```
+
+In **Standard Text Notation**, this would be:
+
+`Capsule_Examples:::CX_My_Capsule::Season:Spring##time:evening^^Markup:CX_My_Capsule__HTML^Styles:CX_My_Capsule__CSS^Scripts:CX_My_Capsule__JS^Data:CX_My_Capsule__JSON@@CX_My_Capsule__HTML`
 
 ### A short note about the differences between PrimeCells in *file-based* and *inline* CapsuleManifests
 In inline **CapsuleManifests**, as in file-based **CapsuleManifests**, the **PrimeCell** will commonly have a value of _Markup_ or _Vectors_ or _Data_.
