@@ -74,14 +74,14 @@ Consequently, in an inline **CapsuleManifest**, the **PrimeCell**  will need to 
   2) something other than _Vectors_ (in SVG Documents); or
   3) has a *CellName* which doesn't echo the *CapsuleName*
 
-That is, these three references (with explicitly named **PrimeCells**) are equivalent:
+That is, these three references (note the first example with no explicit **PrimeCellType**) are equivalent:
 ```html
 <!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Button_Markup>]-->
 <!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Markup="Button_Markup">]-->
 <!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Markup="Button_Markup__HTML">]-->
 ```
 
-And these three references (with explicitly named **PrimeCells**) are equivalent, too:
+And these three references (note the first example with no explicit **PrimeCellName**) are equivalent, too:
 
 ```html
 <!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Data>]-->
@@ -89,7 +89,7 @@ And these three references (with explicitly named **PrimeCells**) are equivalent
 <!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Data="CX_My_Capsule__JSON">]-->
 ```
 
-And, finally, these three references (note the first example with no declared **PrimeCell**) are equivalent:
+And, finally, these three references (note the first example with no **PrimeCell** declaration at all) are equivalent:
 
 ```html
 <!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening">]-->
@@ -99,7 +99,7 @@ And, finally, these three references (note the first example with no declared **
 ```
 
 
-    <!--[<Ashiva_Control_Menu (Ashiva) [@]Markup="Button_Markup" [#][Styles="Button_Markup", Scripts="Button_Markup"]>]-->
+    <!--[<Ashiva_Control_Menu (Ashiva) [@]Button_Markup [#][Styles="Button_Markup", Scripts="Button_Markup"]>]-->
     Ashiva:::Ashiva_Control_Menu@@Button_Markup^^Styles:Button_Markup^^Scripts:Button_Markup
 
 
