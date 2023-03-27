@@ -71,8 +71,9 @@ Consequently, in an inline **CapsuleManifest**, the **PrimeCell**  will need to 
   2) something other than _Vectors_ (in SVG Documents); or
   3) has a *CellName* which doesn't echo the *CapsuleName*
 
-That is, these two references (with explicitly named **PrimeCells**) are equivalent:
+That is, these three references (with explicitly named **PrimeCells**) are equivalent:
 ```html
+<!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Button_Markup>]-->
 <!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Markup="Button_Markup">]-->
 <!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Markup="Button_Markup__HTML">]-->
 ```
