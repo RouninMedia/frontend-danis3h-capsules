@@ -52,7 +52,7 @@ Hence, written out in full, the **Danis³h Capsule Reference** above looks like 
 ]-->
 ```
 
-### A short note about the differences between PrimeCells in file-based and inline CapsuleManifests
+### A short note about the differences between PrimeCells in *file-based* and *inline* CapsuleManifests
 In inline **CapsuleManifests**, as in file-based **CapsuleManifests**, the **PrimeCell** will commonly have a value of _Markup_ or _Vectors_ or _Data_.
 
 Unlike in file-based **CapsuleManifests**, however, in an *HTML Document* a CapsuleReference without a declared **PrimeCell** will be *assumed* to contain the implicit **PrimeCell** `[@]Markup` and in an *SVG Document* a CapsuleReference without a **PrimeCell** will be *assumed* to contain the implicit **PrimeCell** `[@]Vectors`.
