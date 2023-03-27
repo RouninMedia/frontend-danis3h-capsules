@@ -4,46 +4,96 @@
 Here's how they are deployed on the Front End.
 
 ## Danis³h Capsule Standard Text Notation
-**Standard Text Notation** for a capsule looks like this:
+**Standard Text Notation** describing a capsule looks like this:
 
     Capsule_Examples:::CX_My_Capsule::Season:Spring##time:evening
     
 _____
 
 ## Danis³h Capsule Reference on the Frontend
-On the *Front End*, within an HTML or SVG Document, the corresponding **Danis³h Capsule Reference** looks like this:
+On the *Front End*, within an HTML or SVG Document, the corresponding **Danis³h CapsuleReference** looks like this:
 
 ```html
 
 <!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening">]-->
 ```
 
-**N.B.** Note that there is *more* to this **Capsule Reference** than there appears to be:
+**N.B.** Note that this **CapsuleReference** contains *two more* implicit pieces of data:
 
- 1) the reference contains an *implicit* inline **CapsuleManifest**:
+ 1) Firstly, the reference contains an *implicit* inline **CapsuleManifest**:
 
      `[#][Markup="CX_My_Capsule", Styles="CX_My_Capsule", Scripts="CX_My_Capsule", Data="CX_My_Capsule"]`
      
- 2) the reference *also* contains an *implicit* **Named Cell** - since everything under discussion here is inline markup, any *implicit Named Cell* will essentially perform the same job as the "silent" *PrimeCell* in a file-based **CapsuleManifest**):
+ 2) Secondly, the reference *also* contains an *implicit* **PrimeCell**.
+
+    These three:
      
-     `[@]CX_My_Capsule` points to: `/.assets/capsules/cx-my-capsule/code/markup/cx-my-capsule--html.json`
+    - `[@]Markup`,
+    - `[@]Markup="CX_My_Capsule"`
+    - `[@]Markup="CX_My_Capsule__HTML"`
+   
+    all point to: `/.assets/capsules/cx-my-capsule/code/markup/cx-my-capsule--html.json`
      
 Hence, written out in full, the **Danis³h Capsule Reference** above looks like this:
 
 ```html
+<!--[
+  <CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening"
 
-<!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [#][Markup="CX_My_Capsule", Styles="CX_My_Capsule", Scripts="CX_My_Capsule", Data="CX_My_Capsule"] [@]CX_My_Capsule>]-->
+    [#][
+      Markup="CX_My_Capsule__HTML",
+      Styles="CX_My_Capsule__CSS",
+      Scripts="CX_My_Capsule__JS",
+      Data="CX_My_Capsule__JSON"
+    ]
+
+    [@]Markup="CX_My_Capsule__HTML"
+  >
+]-->
 ```
 
-If the **Named Cell** is something other than _Markup_ (in HTML documents) or _Vectors_ (in SVG Documents) it will need to be explicitly named:
+### A short note about the differences between PrimeCells in file-based and inline CapsuleManifests
+In inline **CapsuleManifests**, as in file-based **CapsuleManifests**, the **PrimeCell** will commonly have a value of _Markup_ or _Vectors_ or _Data_.
+
+Unlike in file-based **CapsuleManifests**, however, in an *HTML Document* a CapsuleReference without a declared **PrimeCell** will be *assumed* to contain the implicit **PrimeCell** `[@]Markup` and in an *SVG Document* a CapsuleReference without a **PrimeCell** will be *assumed* to contain the implicit **PrimeCell** `[@]Vectors`.
+
+Consequently, in an inline **CapsuleManifest**, the **PrimeCell**  will need to be explicitly named, *only* if:
+
+  i) something other than _Markup_ (in HTML documents); or
+  2) something other than _Vectors_ (in SVG Documents); or
+  3) has a *CellName* which doesn't echo the *CapsuleName*
+
+That is, these two references (with explicitly named **PrimeCells**) are equivalent:
+```html
+<!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Markup="Button_Markup">]-->
+<!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Markup="Button_Markup__HTML">]-->
+```
+
+And these three references (with explicitly named **PrimeCells**) are equivalent, too:
 
 ```html
-
-<!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Script="CX_My_Capsule">]-->
+<!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Data>]-->
+<!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Data="CX_My_Capsule">]-->
+<!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Data="CX_My_Capsule__JSON">]-->
 ```
 
+And, finally, these three references (note the first example with no declared **PrimeCell**) are equivalent:
+
+```html
+<!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening">]-->
+<!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Markup>]-->
+<!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Markup="CX_My_Capsule">]-->
+<!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Markup="CX_My_Capsule__HTML">]-->
+```
+
+
+<!--[<Ashiva_Control_Menu (Ashiva) [@]Markup="Button_Markup" [#][Styles="Button_Markup", Scripts="Button_Markup"]>]-->
+
+
 1) Compare syntax for [@]
-2) THINK OF ANOTHER TERM FOR: **NAMED CELL**
+
+In a file-based **CapsuleManifest**, *PrimeCell* can be one of three: Markup | Vectors | Data
+In a markup-based **CapsuleManifest**, *PrimeCell* will be assumed to be Markup in HTML 
 
 ______
 
