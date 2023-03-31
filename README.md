@@ -56,7 +56,7 @@ In **Standard Text Notation**, the capsule above would be:
 
 `Capsule_Examples:::CX_My_Capsule::Season:Spring##time:evening^^Markup:CX_My_Capsule__HTML^^Styles:CX_My_Capsule__CSS^^Scripts:CX_My_Capsule__JS^^Data:CX_My_Capsule__JSON@@CX_My_Capsule__HTML`
 
-though, of course, normally we wouldn't include the _Implicit Data_, so we would simply write:
+Normally, we wouldn't include the _Implicit Data_ and that's why we write:
 
     Capsule_Examples:::CX_My_Capsule::Season:Spring##time:evening
 
