@@ -22,7 +22,19 @@ On the *Front End*, within an HTML or SVG Document, the corresponding **Danis³h
 
  1) Firstly, the reference contains an *implicit* inline **CapsuleManifest**:
 
-     **WHAT ABOUT BASENAME?? (with a better name) IS IT A DIRECTIVE??**
+
+
+**WHAT ABOUT A DIRECTIVE:** `[&]branchname="Button_Markup"`
+
+Then, instead of:
+
+    <!--[<Ashiva_Control_Menu (Ashiva) [@]Button_Markup [#][Styles="Button_Markup", Scripts="Button_Markup"]>]-->
+    
+This is possible:
+
+    <!--[<Ashiva_Control_Menu (Ashiva) [&]branchname="Button_Markup">]-->
+     
+
 
      `[#][Markup="CX_My_Capsule", Styles="CX_My_Capsule", Scripts="CX_My_Capsule", Data="CX_My_Capsule"]`
      
