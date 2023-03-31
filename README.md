@@ -118,8 +118,20 @@ Each of which would be written like this in **Attribute Notation**:
     Ashiva:::Ashiva_Control_Menu^^Markup:Button_Markup^^Styles:Button_Markup^^Scripts:Button_Markup
     Ashiva:::Ashiva_Control_Menu@@Button_Markup^^Markup:Button_Markup^^Styles:Button_Markup^^Scripts:Button_Markup
 
+Finally, if a front-end **CapsuleReference** intends to use a **CapsuleManifest** (or **PrimeCell**), pre-declared within the file-based **CapsuleManifest** on page load, it can do so using the syntax `[#]`:
 
+```html
+<!--[<Ashiva_Control_Menu (Ashiva) [#]>]-->
+```
 
+The syntax above will invoke on the client-side the same capsule in the same configuration as any of these on the server-side:
+
+```php
+echo danis3hCapsule(${'<Ashiva_Control_Menu (Ashiva) [#]>'});
+echo danis3hCapsule(${'<Ashiva_Control_Menu (Ashiva)>'});
+echo danis3hCapsule(${'<Ashiva_Control_Menu [#]>'});
+echo danis3hCapsule(${'<Ashiva_Control_Menu>'});
+```
 
 ______
 
