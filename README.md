@@ -104,12 +104,14 @@ Also note that, for the sake of brevity, if an inline **CapsuleManifest** is exp
 
 Further note that, if an inline **CapsuleManifest** *is* explicitly declared and a **PrimeCell** *isn't*, then the `Markup` or `Vectors` **PrimeCell** will be *assumed* to be the *first* `Markup` or `Vectors` Cell declared in the inline **CapsuleManifest**.
 
-Thus all three of these references are functionally equivalent:
+Thus all five of these references are functionally equivalent:
 
 ```html
-<!--[<Ashiva_Control_Menu (Ashiva) [@]Button_Markup [#][Styles="Button_Markup", Scripts="Button_Markup"]>]-->
 <!--[<Ashiva_Control_Menu (Ashiva) [#][Markup="Button_Markup" Styles="Button_Markup", Scripts="Button_Markup"]>]-->
+<!--[<Ashiva_Control_Menu (Ashiva) [@]Button_Markup [#][Styles="Button_Markup", Scripts="Button_Markup"]>]-->
+<!--[<Ashiva_Control_Menu (Ashiva) [@]Markup="Button_Markup" [#][Styles="Button_Markup", Scripts="Button_Markup"]>]-->
 <!--[<Ashiva_Control_Menu (Ashiva) [@]Button_Markup [#][Markup="Button_Markup" Styles="Button_Markup", Scripts="Button_Markup"]>]-->
+<!--[<Ashiva_Control_Menu (Ashiva) [@]Markup="Button_Markup" [#][Markup="Button_Markup" Styles="Button_Markup", Scripts="Button_Markup"]>]-->
 ```
 
 Each of which would be written like this in **Attribute Notation**:
