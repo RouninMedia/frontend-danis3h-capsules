@@ -118,7 +118,7 @@ Each of which would be written like this in **Attribute Notation**:
     Ashiva:::Ashiva_Control_Menu^^Markup:Button_Markup^^Styles:Button_Markup^^Scripts:Button_Markup
     Ashiva:::Ashiva_Control_Menu@@Button_Markup^^Markup:Button_Markup^^Styles:Button_Markup^^Scripts:Button_Markup
 
-Finally, if a front-end **CapsuleReference** intends to use a **CapsuleManifest** (or **PrimeCell**), pre-declared within the file-based **CapsuleManifest** on page load, it can do so using the syntax `[#]`:
+Finally, if a front-end **CapsuleReference** references a **Capsule** for which a file-based **CapsuleManifest** has already been declared during page load, it may reference the already-declared **CapsuleManifest** using the syntax `[#]` (or, if need be, the already-declared **PrimeCell** using the syntax `[@]`):
 
 ```html
 <!--[<Ashiva_Control_Menu (Ashiva) [#]>]-->
