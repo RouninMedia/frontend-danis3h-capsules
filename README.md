@@ -100,9 +100,9 @@ And, finally, these four references (note the first example with no **PrimeCell*
 <!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Markup="CX_My_Capsule__HTML">]-->
 ```
 
-Also note that, for the sake of concision, if an inline **CapsuleManifest** is explicitly declared, any **PrimeCell** is implicitly included in that inline **CapsuleManifest**.
+Also note that, for the sake of brevity, if an inline **CapsuleManifest** is explicitly declared, the **PrimeCell** is implicitly included in that inline **CapsuleManifest**.
 
-Further note that, if an inline **CapsuleManifest** *is* explicitly declared and a **PrimeCell** *isn't*, then the `Markup` or `Vectors` **PrimeCell** will be *assumed* to be the first `Markup` or `Vectors` Cell declared in the inline **CapsuleManifest**.
+Further note that, if an inline **CapsuleManifest** *is* explicitly declared and a **PrimeCell** *isn't*, then the `Markup` or `Vectors` **PrimeCell** will be *assumed* to be the *first* `Markup` or `Vectors` Cell declared in the inline **CapsuleManifest**.
 
 Thus all three of these references are functionally equivalent:
 
