@@ -24,7 +24,7 @@ On the *Front End*, within an HTML or SVG Document, the corresponding **Danis³h
 
 
 
-**WHAT ABOUT A DIRECTIVE:** `[&]branch="Button_Markup"`
+**WHAT ABOUT A DIRECTIVE:** `[&]branch="Button_Markup"`, but it should be plural: **branches** or **roots** or **tree** or **segments**
 
 Then, instead of:
 
@@ -32,7 +32,7 @@ Then, instead of:
     
 This is possible:
 
-    <!--[<Ashiva_Control_Menu (Ashiva) [&]branch="Button_Markup">]-->
+    <!--[<Ashiva_Control_Menu (Ashiva) [&]roots="Button_Markup">]-->
     
 **ALSO, I NEED AN EXPLICIT** `null` **VALUE FOR PRIMECELL...**    
      
