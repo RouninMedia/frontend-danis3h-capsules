@@ -67,8 +67,8 @@ A key difference between the two, however, is that file-based **CapsuleManifests
 
 Therefore, unlike in file-based **CapsuleManifests**:
 
- - in an *HTML Document* a CapsuleReference with no declared **PrimeCell** will be *assumed* to contain an implicit Markup **PrimeCell** (eg. `[@]Markup`)
- - in an *SVG Document* a CapsuleReference with no **PrimeCell** will be *assumed* to contain an implicit Vectors **PrimeCell** (eg. `[@]Vectors`)
+ - in an *HTML Document* a CapsuleReference with no declared **PrimeCell** will *assume* an implicit Markup **PrimeCell** (eg. `[@]Markup`)
+ - in an *SVG Document* a CapsuleReference with no **PrimeCell** will *assume* an implicit Vectors **PrimeCell** (eg. `[@]Vectors`)
 
 Consequently, in an inline **CapsuleManifest**, the **PrimeCell**  will need to be explicitly named, *only* if:
 
