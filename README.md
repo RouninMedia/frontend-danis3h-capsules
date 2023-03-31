@@ -215,7 +215,7 @@ let myCapsuleReferenceObject = {
   
   LightModifiers: {
     time: 'evening'
-  }
+  },
   
   CapsuleManifest: {},
   PrimeCell: {}
@@ -276,7 +276,7 @@ let myCapsuleReferenceObject = {
   
   LightModifiers: {
     theme: 'light'
-  }
+  },
   
   CapsuleManifest: {},
   PrimeCell: {}
