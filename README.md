@@ -54,7 +54,7 @@ Hence, written out in full, the **Danis³h Capsule Reference** above looks like 
 
 In **Attribute Notation**, the capsule above would be:
 
-`Capsule_Examples:::CX_My_Capsule::Season:Spring||time:evening##Markup:CX_My_Capsule__HTML##Styles:CX_My_Capsule__CSS##Scripts:CX_My_Capsule__JS##Data:CX_My_Capsule__JSON@@CX_My_Capsule__HTML`
+`Capsule_Examples:::CX_My_Capsule::Season:Spring||time:evening##Markup:CX_My_Capsule__HTML##Styles:CX_My_Capsule__CSS##Scripts:CX_My_Capsule__JS##Data:CX_My_Capsule__JSON@@Markup:CX_My_Capsule__HTML`
 
 Though, normally, there's no need to include the _Implicit Data_ and that's why we write:
 
