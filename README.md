@@ -114,10 +114,6 @@ Thus all three of these references are functionally equivalent:
 
 Each of which would be written like this in **Attribute Notation**:
     
-    Ashiva:::Ashiva_Control_Menu@@Button_Markup^^Styles:Button_Markup^^Scripts:Button_Markup
-    Ashiva:::Ashiva_Control_Menu^^Markup:Button_Markup^^Styles:Button_Markup^^Scripts:Button_Markup
-    Ashiva:::Ashiva_Control_Menu@@Button_Markup^^Markup:Button_Markup^^Styles:Button_Markup^^Scripts:Button_Markup
-    
     Ashiva:::Ashiva_Control_Menu@@Button_Markup##Styles:Button_Markup##Scripts:Button_Markup
     Ashiva:::Ashiva_Control_Menu##Markup:Button_Markup##Styles:Button_Markup##Scripts:Button_Markup
     Ashiva:::Ashiva_Control_Menu@@Button_Markup##Markup:Button_Markup##Styles:Button_Markup##Scripts:Button_Markup
