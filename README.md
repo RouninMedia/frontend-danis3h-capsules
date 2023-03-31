@@ -54,7 +54,7 @@ Hence, written out in full, the **Danis³h Capsule Reference** above looks like 
 
 In **Attribute Notation**, the capsule above would be:
 
-`Capsule_Examples:::CX_My_Capsule::Season:Spring||time:evening^^Markup:CX_My_Capsule__HTML^^Styles:CX_My_Capsule__CSS^^Scripts:CX_My_Capsule__JS^^Data:CX_My_Capsule__JSON@@CX_My_Capsule__HTML`
+`Capsule_Examples:::CX_My_Capsule::Season:Spring||time:evening##Markup:CX_My_Capsule__HTML##Styles:CX_My_Capsule__CSS##Scripts:CX_My_Capsule__JS##Data:CX_My_Capsule__JSON@@CX_My_Capsule__HTML`
 
 Though, normally, there's no need to include the _Implicit Data_ and that's why we write:
 
@@ -117,6 +117,10 @@ Each of which would be written like this in **Attribute Notation**:
     Ashiva:::Ashiva_Control_Menu@@Button_Markup^^Styles:Button_Markup^^Scripts:Button_Markup
     Ashiva:::Ashiva_Control_Menu^^Markup:Button_Markup^^Styles:Button_Markup^^Scripts:Button_Markup
     Ashiva:::Ashiva_Control_Menu@@Button_Markup^^Markup:Button_Markup^^Styles:Button_Markup^^Scripts:Button_Markup
+    
+    Ashiva:::Ashiva_Control_Menu@@Button_Markup##Styles:Button_Markup##Scripts:Button_Markup
+    Ashiva:::Ashiva_Control_Menu##Markup:Button_Markup##Styles:Button_Markup##Scripts:Button_Markup
+    Ashiva:::Ashiva_Control_Menu@@Button_Markup##Markup:Button_Markup##Styles:Button_Markup##Scripts:Button_Markup
 
 Finally, if a front-end **CapsuleReference** references a **Capsule** for which a file-based **CapsuleManifest** has already been declared during page load, it may reference the already-declared **CapsuleManifest** using the syntax `[#]` (or, if need be, the already-declared **PrimeCell** using the syntax `[@]`):
 
