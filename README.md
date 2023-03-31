@@ -72,9 +72,9 @@ Therefore, unlike in file-based **CapsuleManifests**:
 
 Consequently, in an inline **CapsuleManifest**, the **PrimeCell**  will need to be explicitly named, *only* if:
 
-  i) something other than _Markup_ (in HTML documents); or
-  2) something other than _Vectors_ (in SVG Documents); or
-  3) has a *CellName* which doesn't echo the *CapsuleName*
+ 1. something other than _Markup_ (in HTML documents); or
+ 2. something other than _Vectors_ (in SVG Documents); or
+ 3. has a *CellName* which doesn't echo the *CapsuleName*
 
 That is, these three references (note the first example with no explicit **PrimeCellType**) are equivalent:
 ```html
