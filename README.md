@@ -67,8 +67,8 @@ A key difference between the two, however, is that file-based **CapsuleManifests
 
 Therefore, unlike in file-based **CapsuleManifests**:
 
- - in an *HTML Document* a CapsuleReference without a declared **PrimeCell** will be *assumed* to contain the implicit **PrimeCell** `[@]Markup`
- - in an *SVG Document* a CapsuleReference without a **PrimeCell** will be *assumed* to contain the implicit **PrimeCell** `[@]Vectors`
+ - in an *HTML Document* a CapsuleReference without a declared **PrimeCell** will be *assumed* to contain an implicit Markup **PrimeCell** (eg. `[@]Markup`)
+ - in an *SVG Document* a CapsuleReference without a **PrimeCell** will be *assumed* to contain an implicit Vectors **PrimeCell** (eg. `[@]Vectors`)
 
 Consequently, in an inline **CapsuleManifest**, the **PrimeCell**  will need to be explicitly named, *only* if:
 
@@ -91,7 +91,7 @@ And these three references (note the first example with no explicit **PrimeCellN
 <!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Data="CX_My_Capsule__JSON">]-->
 ```
 
-And, finally, these three references (note the first example with no **PrimeCell** declaration at all) are equivalent:
+And, finally, these four references (note the first example with no **PrimeCell** declaration at all) are equivalent:
 
 ```html
 <!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening">]-->
@@ -100,12 +100,26 @@ And, finally, these three references (note the first example with no **PrimeCell
 <!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening" [@]Markup="CX_My_Capsule__HTML">]-->
 ```
 
+Also note that, for the sake of concision, if an inline **CapsuleManifest** is explicitly declared, any **PrimeCell** is implicitly included in that inline **CapsuleManifest**.
 
-    <!--[<Ashiva_Control_Menu (Ashiva) [@]Button_Markup [#][Styles="Button_Markup", Scripts="Button_Markup"]>]-->
+Further note that, if an inline **CapsuleManifest** *is* explicitly declared and a **PrimeCell** *isn't*, then the `Markup` or `Vectors` **PrimeCell** will be *assumed* to be the first `Markup` or `Vectors` Cell declared in the inline **CapsuleManifest**.
+
+Thus all three of these references are functionally equivalent:
+
+```html
+<!--[<Ashiva_Control_Menu (Ashiva) [@]Button_Markup [#][Styles="Button_Markup", Scripts="Button_Markup"]>]-->
+<!--[<Ashiva_Control_Menu (Ashiva) [#][Markup="Button_Markup" Styles="Button_Markup", Scripts="Button_Markup"]>]-->
+<!--[<Ashiva_Control_Menu (Ashiva) [@]Button_Markup [#][Markup="Button_Markup" Styles="Button_Markup", Scripts="Button_Markup"]>]-->
+```
+
+Each of which would be written like this in **Standard Text Notation**:
+    
     Ashiva:::Ashiva_Control_Menu@@Button_Markup^^Styles:Button_Markup^^Scripts:Button_Markup
+    Ashiva:::Ashiva_Control_Menu^^Markup:Button_Markup^^Styles:Button_Markup^^Scripts:Button_Markup
+    Ashiva:::Ashiva_Control_Menu@@Button_Markup^^Markup:Button_Markup^^Styles:Button_Markup^^Scripts:Button_Markup
 
 
-1) Compare syntax for [@]
+
 
 ______
 
