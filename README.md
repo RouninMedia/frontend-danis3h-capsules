@@ -63,7 +63,9 @@ Normally, we wouldn't include the _Implicit Data_ and that's why we write:
 ### A short note about the differences between PrimeCells in *file-based* and *inline* CapsuleManifests
 In inline **CapsuleManifests**, as in file-based **CapsuleManifests**, the **PrimeCell** will commonly have a value of _Markup_ or _Vectors_ or _Data_.
 
-Unlike in file-based **CapsuleManifests**, however:
+A key difference between the two, however, is that file-based **CapsuleManifests** are *free-floating*, standing alone from other files, while inline **CapsuleManifests** are declared within the context of an `HTML Document` or an `SVG Document`.
+
+Therefore, unlike in file-based **CapsuleManifests**:
 
  - in an *HTML Document* a CapsuleReference without a declared **PrimeCell** will be *assumed* to contain the implicit **PrimeCell** `[@]Markup`
  - in an *SVG Document* a CapsuleReference without a **PrimeCell** will be *assumed* to contain the implicit **PrimeCell** `[@]Vectors`
