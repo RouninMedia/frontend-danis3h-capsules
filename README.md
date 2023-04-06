@@ -8,6 +8,14 @@ The **Attribute Notation** to describe a capsule looks like this:
 
     Capsule_Examples:::CX_My_Capsule::Season:Spring||time:evening
     
+This reveals the following information:
+
+ - **CapsulePublisher:** `Capsule_Examples`
+ - **CapsulePrefix:** `CX`
+ - **CapsuleName:** `CX_MyCapsule`
+ - **CapsulePublisher:** `{Season: 'Spring'}`
+ - **LightModifiers:** `{time: 'evening'}`
+    
 _____
 
 ## Danis³h Capsule Reference on the Frontend
@@ -17,13 +25,13 @@ On the *Front End*, within an HTML or SVG Document, the corresponding **Danis³h
 <!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening">]-->
 ```
 
-**N.B.** Note that this **CapsuleReference** contains *two more* implicit pieces of data:
+**N.B.** Importantly this **CapsuleReference** contains *two more* non-visible but implicit pieces of data:
 
  1) Firstly, the reference contains an *implicit* inline **CapsuleManifest**:
 
     ```html
-    [#][Markup, Styles, Scripts, Data]
-    [#][Markup="CX_My_Capsule", Styles="CX_My_Capsule", Scripts="CX_My_Capsule", Data="CX_My_Capsule"]
+    [#][Markup, Styles, Scripts, Data] *// <= shorthand*
+    [#][Markup="CX_My_Capsule", Styles="CX_My_Capsule", Scripts="CX_My_Capsule", Data="CX_My_Capsule"] *// <= longhand*
     ```
      
  2) Secondly, the reference *also* contains an *implicit* **PrimeCell**.
