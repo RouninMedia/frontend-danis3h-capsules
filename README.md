@@ -63,13 +63,17 @@ Hence, written out in full, the **Danis³h Capsule Reference** above looks like 
 ]-->
 ```
 
-In **Attribute Notation**, the capsule above would be:
+In **Attribute Notation**, the entire **CapsuleReference** above would be:
 
 `Capsule_Examples:::CX_My_Capsule::Season:Spring||time:evening@@Markup:CX_My_Capsule__HTML##Markup:CX_My_Capsule__HTML##Styles:CX_My_Capsule__CSS##Scripts:CX_My_Capsule__JS##Data:CX_My_Capsule__JSON`
 
-Though, normally, there's really *no need* to include the _Implicit Data_ and that's why we write:
+Though, normally, there's really *no need* to include the _Implicit Data_ and that's why it's enough to write:
 
     Capsule_Examples:::CX_My_Capsule::Season:Spring||time:evening
+    
+Not unusually, there's no need even to include any explicit **LightModifiers**, so the standard attribute notation would simply be:
+
+    Capsule_Examples:::CX_My_Capsule::Season:Spring
     
 
 ### The `scan` Directive
