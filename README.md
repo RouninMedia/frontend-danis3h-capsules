@@ -107,7 +107,7 @@ It will suffice to write:
     <!--[<CX_My_Capsule (Capsule_Examples) [&]scan="CX_Button">]-->
 
 ### Negation in CapsuleReferences (`!`)
-Since an absent **PrimeCell** or **CapsuleManifest** leads to values being implied, we need an explicit way to indicate that assets don't exist or are not being invoked at all.
+Since any omission to declare **PrimeCell** or **CapsuleManifest** values leads to default values being implied, we need an explicit way to indicate that values don't actually exist and are not being invoked at all.
 
 Negation in ***CapsuleReference** Syntax* is indicated via: `!`.
 
