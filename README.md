@@ -36,15 +36,17 @@ On the *Front End*, within an HTML or SVG Document, the **Danis³h CapsuleRefere
    #### Longhand
     [#][Markup="CX_My_Capsule", Styles="CX_My_Capsule", Scripts="CX_My_Capsule", Data="CX_My_Capsule"]
      
- 2) Secondly, the reference *also* contains an *implicit* **PrimeCell** (or single-item **PrimeCellSet**). The **PrimeCell** is generally the Cell (usually a `Markup` Cell or a `Vectors` Cell) upon which any Styles, Scripts and Data act, but is occasionally represented by an actual `Data`, `Scripts` or `Styles` Cell. 
+ 2) Secondly, the reference *also* contains an *implicit* **PrimeCell** (or single-item **PrimeCellSet**).
 
-    These three:
+    The **PrimeCell** is generally the Cell (usually a `Markup` Cell or a `Vectors` Cell) upon which any Styles, Scripts and Data act, but is occasionally     represented by an actual `Data`, `Scripts` or `Styles` Cell. 
+
+    These three **PrimeCell** references:
      
     - `[@]Markup`,
     - `[@]Markup="CX_My_Capsule"`
     - `[@]Markup="CX_My_Capsule__HTML"`
    
-    all point to: `/.assets/capsules/cx-my-capsule/code/markup/cx-my-capsule--html.json`
+    all point to this *relative-to-root URL* in **Ashiva**: `/.assets/capsules/cx-my-capsule/code/markup/cx-my-capsule--html.json`
     
 Hence, written out in full, the **Danis³h Capsule Reference** above looks like this:
 
