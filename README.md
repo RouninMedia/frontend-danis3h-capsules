@@ -31,14 +31,10 @@ On the *Front End*, within an HTML or SVG Document, the corresponding **Danis³h
  1) Firstly, the reference contains an *implicit* inline **CapsuleManifest**:
  
    #### Shorthand
-    ```html
     [#][Markup, Styles, Scripts, Data]
-    ```
     
    #### Longhand
-   ```html
     [#][Markup="CX_My_Capsule", Styles="CX_My_Capsule", Scripts="CX_My_Capsule", Data="CX_My_Capsule"] // <= longhand
-    ```
      
  2) Secondly, the reference *also* contains an *implicit* **PrimeCell**.
 
