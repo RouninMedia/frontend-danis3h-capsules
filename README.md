@@ -40,9 +40,10 @@ On the *Front End*, within an HTML or SVG Document, the **Danis³h CapsuleRefere
 
     The **PrimeCell** is generally the Cell (usually a `Markup` Cell or a `Vectors` Cell) upon which any Styles, Scripts and Data act, but is occasionally     represented by an actual `Data`, `Scripts` or `Styles` Cell. 
 
-    These three **PrimeCell** references:
+    These four **PrimeCell** references:
      
     - `[@]Markup`,
+    - `[@]CX_My_Capsule`
     - `[@]Markup="CX_My_Capsule"`
     - `[@]Markup="CX_My_Capsule__HTML"`
    
@@ -95,9 +96,7 @@ will yield the following *implicit* inline **CapsuleManifest**:
 
 and the following *implicit* **PrimeCell**:
 
-    - `[@]Markup`,
     - `[@]Markup="CX_Button"`
-    - `[@]Markup="CX_Button__HTML"`
 
 Thus, instead of:
 
