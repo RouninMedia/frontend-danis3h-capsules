@@ -34,7 +34,7 @@ On the *Front End*, within an HTML or SVG Document, the corresponding **Danis³h
     [#][Markup, Styles, Scripts, Data]
     
    #### Longhand
-    [#][Markup="CX_My_Capsule", Styles="CX_My_Capsule", Scripts="CX_My_Capsule", Data="CX_My_Capsule"] // <= longhand
+    [#][Markup="CX_My_Capsule", Styles="CX_My_Capsule", Scripts="CX_My_Capsule", Data="CX_My_Capsule"]
      
  2) Secondly, the reference *also* contains an *implicit* **PrimeCell**.
 
