@@ -11,7 +11,8 @@ The **Attribute Notation** to describe a capsule looks like this:
 This reveals the following information:
 
  - **CapsulePublisher:** `Capsule_Examples`
- - **CapsulePrefix:** `CX`
+ - **CapsuleImprint:** none
+ - **CapsulePublisher ShortName:** `CX`
  - **CapsuleName:** `CX_MyCapsule`
  - **CapsulePublisher:** `{Season: 'Spring'}`
  - **LightModifiers:** `{time: 'evening'}`
