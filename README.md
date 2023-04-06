@@ -4,7 +4,7 @@
 Here's how they are deployed on the Front End.
 
 ## Danis³h Capsule Attribute Notation
-The **Attribute Notation** to describe a capsule looks like this:
+The **Attribute Notation** uses continuous plaintext to describe a capsule, like this:
 
     Capsule_Examples:::CX_My_Capsule::Season:Spring||time:evening
     
