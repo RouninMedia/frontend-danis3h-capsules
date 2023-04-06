@@ -14,7 +14,7 @@ This reveals the following information:
  - **CapsuleImprint:** none
  - **CapsulePublisher ShortName:** `CX`
  - **CapsuleName:** `CX_MyCapsule`
- - **CapsulePublisher:** `{Season: 'Spring'}`
+ - **StrongModifiers:** `{Season: 'Spring'}`
  - **LightModifiers:** `{time: 'evening'}`
     
 _____
