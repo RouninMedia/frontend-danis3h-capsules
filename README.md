@@ -3,7 +3,7 @@
 
 Here's how they are deployed on the Front End.
 
-## Danis³h Capsule Standard Text Notation
+## Danis³h Capsule Attribute Notation
 The **Attribute Notation** to describe a capsule looks like this:
 
     Capsule_Examples:::CX_My_Capsule::Season:Spring||time:evening
@@ -20,7 +20,7 @@ This reveals the following information:
 _____
 
 ## Danis³h Capsule Reference on the Frontend
-On the *Front End*, within an HTML or SVG Document, the corresponding **Danis³h CapsuleReference** looks like this:
+On the *Front End*, within an HTML or SVG Document, the **Danis³h CapsuleReference** described by the *Attribute Notation* above would look like this:
 
 ```html
 <!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening">]-->
