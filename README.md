@@ -19,9 +19,13 @@ This reveals the following information:
 
 _____
 
-## New Format for Danis³h Capsule References on the Server Side
+## Aside: New Format for Danis³h Capsule References on the Server Side
 
-To complement the new front-end references...
+To complement the new front-end reference syntax...
+
+_______
+
+## First Draft (deprecated)
 
   - Redesigned **CodeSheet References** in **CapsuleManifests**
       1. There are now *three* parameters (instead of two):
@@ -38,7 +42,12 @@ To complement the new front-end references...
          1. the **CapsuleManifest** imports the named *CodeSheet Source File* (which usually includes a suffix and may include a filepath or filetype)
          2. the **CapsuleManifest** names and builds the *CodeSheet* (from the static or dynamic *CodeSheet SourceFile* and any *Transformers*)
          3. the **CapsuleManifest** saves the named, built *CodeSheet* as a namespaced `CodeCell`
-         4. the **CapsuleManifest** locks the `CodeCell` into the **Capsule** 
+         4. the **CapsuleManifest** locks the `CodeCell` into the **Capsule**
+_____
+
+## Second Draft
+
+
     
 _____
 
