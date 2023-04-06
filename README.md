@@ -109,7 +109,7 @@ It will suffice to write:
 ### Negation in CapsuleReferences (`!`)
 Since any omission to declare **PrimeCell** or **CapsuleManifest** values leads to default values being implied, we need an explicit way to indicate that values don't actually exist and are not being invoked at all.
 
-Negation in ***CapsuleReference** Syntax* is indicated via: `!`.
+In ***CapsuleReference** Syntax* a non-existent value is indicated via a `!` prefix.
 
 This enables a **CapsuleReference** which explicitly has no **PrimeCell** to be written out like this:
 
@@ -135,7 +135,7 @@ We can use the same negation syntax in an inline **CapsuleManifest**:
 <!--[<CX_My_Capsule (Capsule_Examples) [#][!Markup, Scripts="CX_My_Other_Capsule", !Data]>]-->
 ```
 
-which references these two **CapsuleCells*:
+The line above references these two **CapsuleCells**, one explicitly, the other implicitly:
 
  - `Styles="CX_My_Capsule"`
  - `Scripts="CX_My_Other_Capsule"`
