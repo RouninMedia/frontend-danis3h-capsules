@@ -14,7 +14,6 @@ _____
 On the *Front End*, within an HTML or SVG Document, the corresponding **Danis³h CapsuleReference** looks like this:
 
 ```html
-
 <!--[<CX_My_Capsule (Capsule_Examples) Season="Spring" time="evening">]-->
 ```
 
@@ -22,23 +21,10 @@ On the *Front End*, within an HTML or SVG Document, the corresponding **Danis³h
 
  1) Firstly, the reference contains an *implicit* inline **CapsuleManifest**:
 
-
-
-**WHAT ABOUT A DIRECTIVE:** `[&]focus="Button_Markup"`
-
-Then, instead of:
-
-    <!--[<Ashiva_Control_Menu (Ashiva) [@]Button_Markup [#][Styles="Button_Markup", Scripts="Button_Markup"]>]-->
-    
-This is possible:
-
-    <!--[<Ashiva_Control_Menu (Ashiva) [&]focus="Button_Markup">]-->
-    
-**ALSO, I NEED AN EXPLICIT** `null` **VALUE FOR PRIMECELL...**    
-     
-______
-
-     `[#][Markup="CX_My_Capsule", Styles="CX_My_Capsule", Scripts="CX_My_Capsule", Data="CX_My_Capsule"]`
+    ```html
+    [#][Markup, Styles, Scripts, Data]
+    [#][Markup="CX_My_Capsule", Styles="CX_My_Capsule", Scripts="CX_My_Capsule", Data="CX_My_Capsule"]
+    ```
      
  2) Secondly, the reference *also* contains an *implicit* **PrimeCell**.
 
@@ -49,7 +35,7 @@ ______
     - `[@]Markup="CX_My_Capsule__HTML"`
    
     all point to: `/.assets/capsules/cx-my-capsule/code/markup/cx-my-capsule--html.json`
-     
+    
 Hence, written out in full, the **Danis³h Capsule Reference** above looks like this:
 
 ```html
@@ -72,9 +58,88 @@ In **Attribute Notation**, the capsule above would be:
 
 `Capsule_Examples:::CX_My_Capsule::Season:Spring||time:evening@@Markup:CX_My_Capsule__HTML##Markup:CX_My_Capsule__HTML##Styles:CX_My_Capsule__CSS##Scripts:CX_My_Capsule__JS##Data:CX_My_Capsule__JSON`
 
-Though, normally, there's no need to include the _Implicit Data_ and that's why we write:
+Though, normally, there's really *no need* to include the _Implicit Data_ and that's why we write:
 
     Capsule_Examples:::CX_My_Capsule::Season:Spring||time:evening
+    
+
+### The `scan` Directive
+The default **CellName** used in the implicit data is identical to the **CapsuleName** (`CX_My_Capsule`), the default can be changed via the `scan` **Directive**:
+
+**e.g.**
+
+```html
+[&]scan="CX_Button"
+```
+will yield the following *implicit* inline **CapsuleManifest**:
+
+    ```html
+    [#][Markup="CX_Button", Styles="CX_Button", Scripts="CX_Button", Data="CX_Button"]
+    ```
+
+and the following *implicit* **PrimeCell**:
+
+    - `[@]Markup`,
+    - `[@]Markup="CX_Button"`
+    - `[@]Markup="CX_Button__HTML"`
+
+Thus, instead of:
+
+    <!--[<CX_My_Capsule (Capsule_Examples) [@]CX_Button [#][Markup="CX_Button", Styles="CX_Button", Scripts="CX_Button"]>]-->
+    
+It will suffice to write:
+    
+    <!--[<CX_My_Capsule (Capsule_Examples) [&]scan="CX_Button">]-->
+
+### Negation in CapsuleReferences (`!`)
+Since an absent **PrimeCell** or **CapsuleManifest** leads to values being implied, we need an explicit way to indicate that assets don't exist or are not being invoked at all.
+
+Negation in ***CapsuleReference** Syntax* is indicated via: `!`.
+
+This enables a **CapsuleReference** which explicitly has no **PrimeCell** to be written out like this:
+
+```html
+<!--[<CX_My_Capsule (Capsule_Examples) [!@]>]-->
+```
+
+If, instead, we wrote out:
+
+```html
+<!--[<CX_My_Capsule (Capsule_Examples)>]-->
+```
+
+this would be the equivalent of:
+
+```html
+<!--[<CX_My_Capsule (Capsule_Examples) [@]Markup="CX_My_Capsule__HTML">]-->
+```
+
+We can use the same negation syntax in an inline **CapsuleManifest**:
+
+```html
+<!--[<CX_My_Capsule (Capsule_Examples) [#][!Markup, Scripts="CX_My_Other_Capsule", !Data]>]-->
+```
+
+which references these two **CapsuleCells*:
+
+ - `Styles="CX_My_Capsule"`
+ - `Scripts="CX_My_Other_Capsule"`
+
+
+If, instead, we wrote out *only*:
+
+```html
+<!--[<CX_My_Capsule (Capsule_Examples) [#][Scripts="CX_My_Other_Capsule"]>]-->
+```
+
+this would be the equivalent of:
+
+```html
+<!--[<CX_My_Capsule (Capsule_Examples) [#][Markup="CX_My_Capsule", Styles="CX_My_Capsule", Scripts="CX_My_Other_Capsule", Data="CX_My_Capsule"]>]-->
+```
+    
+______
+    
 
 ### A short note about the differences between PrimeCells in *file-based* and *inline* CapsuleManifests
 In inline **CapsuleManifests**, as in file-based **CapsuleManifests**, the **PrimeCell** will commonly have a value of _Markup_ or _Vectors_ or _Data_.
