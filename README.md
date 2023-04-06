@@ -29,9 +29,14 @@ On the *Front End*, within an HTML or SVG Document, the corresponding **Danis³h
 **N.B.** Importantly this **CapsuleReference** contains *two more* non-visible but implicit pieces of data:
 
  1) Firstly, the reference contains an *implicit* inline **CapsuleManifest**:
-
+ 
+   #### Shorthand
     ```html
-    [#][Markup, Styles, Scripts, Data] // <= shorthand
+    [#][Markup, Styles, Scripts, Data]
+    ```
+    
+   #### Longhand
+   ```html
     [#][Markup="CX_My_Capsule", Styles="CX_My_Capsule", Scripts="CX_My_Capsule", Data="CX_My_Capsule"] // <= longhand
     ```
      
