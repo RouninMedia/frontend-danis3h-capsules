@@ -36,7 +36,7 @@ On the *Front End*, within an HTML or SVG Document, the **Danis³h CapsuleRefere
    #### Longhand
     [#][Markup="CX_My_Capsule", Styles="CX_My_Capsule", Scripts="CX_My_Capsule", Data="CX_My_Capsule"]
      
- 2) Secondly, the reference *also* contains an *implicit* **PrimeCell** (or single item **PrimeCellSet**). The **PrimeCell** is generally the Cell (usually a `Markup` Cell or a `Vectors` Cell) upon which any Styles, Scripts and Data act, but is occasionally represented by an actual `Data`, `Scripts` or `Styles` Cell. 
+ 2) Secondly, the reference *also* contains an *implicit* **PrimeCell** (or single-item **PrimeCellSet**). The **PrimeCell** is generally the Cell (usually a `Markup` Cell or a `Vectors` Cell) upon which any Styles, Scripts and Data act, but is occasionally represented by an actual `Data`, `Scripts` or `Styles` Cell. 
 
     These three:
      
