@@ -16,6 +16,29 @@ This reveals the following information:
  - **CapsuleName:** `CX_MyCapsule`
  - **StrongModifiers:** `{Season: 'Spring'}`
  - **LightModifiers:** `{time: 'evening'}`
+
+_____
+
+## New Format for Danis³h Capsule References on the Server Side
+
+To complement the new front-end references...
+
+  - Redesigned **CodeSheet References** in **CapsuleManifests**
+      1. There are now *three* parameters (instead of two):
+         1. *CodeSheet Name*
+         2. *CodeSheet Source FileName* + *CodeSheet Source FileType*
+         3. *CodeSheet Source FilePath*
+      2. Of these, *if* the *CodeSheet Name* ends in `Styles`:
+         1. the *FileType* will be assumed to be `__CSS`
+         2. the *FilePath* assumed to be `Styles`
+      3. If the *FileType* is `.scss` and / or the *FilePath* is `New_Styles___2023___Feb` then one and / or both will need to be explicitly stated
+      4. Alternatively, if the *CodeSheetName* does not end in a recognised suffix, then *FileType* and *FilePath* will need to be explicitly stated
+      5. **N.B.** the *CodeSheetName* (and *CodeSheet Filename*) are *not obliged* to end in a recognised suffix; but the *Capsule `CodeCell` Name* is
+      6. To clarify terminology:
+         1. the **CapsuleManifest** imports the named *CodeSheet Source File* (which usually includes a suffix and may include a filepath or filetype)
+         2. the **CapsuleManifest** names and builds the *CodeSheet* (from the static or dynamic *CodeSheet SourceFile* and any *Transformers*)
+         3. the **CapsuleManifest** saves the named, built *CodeSheet* as a namespaced `CodeCell`
+         4. the **CapsuleManifest** locks the `CodeCell` into the **Capsule** 
     
 _____
 
