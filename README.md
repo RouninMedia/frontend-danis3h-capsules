@@ -19,13 +19,13 @@ This reveals the following information:
 
 _____
 
-## Aside: New Format for Danis³h Capsule References on the Server Side
+## Aside: To match the format / capabilities of Danis³h Capsules on the Frontend, there is a new format for Danis³h Capsules on the Server Side
 
 To complement the new front-end reference syntax...
 
 _______
 
-## First Draft (deprecated)
+## First Draft *(deprecated)*
 
   - Redesigned **CodeSheet References** in **CapsuleManifests**
       1. There are now *three* parameters (instead of two):
