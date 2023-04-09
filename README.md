@@ -51,6 +51,12 @@ _____
     
 _____
 
+## Notes:
+
+SIGNIFICANT STEP FORWARD: In front-end capsule references, I wondered if I could use something similar to theCellName Reference syntax used when inspecting individual Cells (like: <Markup[@]SB_nextPage>). But then I realised that this might require a block of multiple references (eg. one for markup, one for styles etc.) or else redundant loading, before seeing that a much more configurable shorthand would be an Inline CapsuleManifest (using xHan) which plays the same role on the front-end as played by the actual CapsuleManifest file on the server-side filesystem for when Capsules are invoked server-side
+
+_____
+
 ## Danis³h Capsule Reference on the Frontend
 On the *Front End*, within an HTML or SVG Document, the **Danis³h CapsuleReference** described by the *Attribute Notation* above would look like this:
 
