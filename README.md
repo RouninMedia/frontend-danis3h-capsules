@@ -58,13 +58,13 @@ _____
 
 _____
 
-## Notes:
+## Notes (I):
 
 SIGNIFICANT STEP FORWARD: In front-end capsule references, I wondered if I could use something similar to theCellName Reference syntax used when inspecting individual Cells (like: <Markup[@]SB_nextPage>). But then I realised that this might require a block of multiple references (eg. one for markup, one for styles etc.) or else redundant loading, before seeing that a much more configurable shorthand would be an Inline CapsuleManifest (using xHan) which plays the same role on the front-end as played by the actual CapsuleManifest file on the server-side filesystem for when Capsules are invoked server-side
 
 _____
 
-## Further Notes
+## Notes (II):
 
    - Changed `CustomComponents` to **Namespace-Suffixed CodeCells** to standardise "named cells" & enable formerly unavailable functionality
      
@@ -82,6 +82,26 @@ _____
        - when the user interacts with the button, the `Button_Scripts` *CapsuleCell* of `Ashiva_Menu` dynamically inserts a `CapsuleReference` into the page (which contains its own inline `CapsuleManifest`) and then parses that `CapsuleReference` which leads to the asynchronous loading of several new `CapsuleCells` from the *same Capsule* (`CapsuleCells` which weren't initially loaded): *menu markup*, *menu styles* and *menu scripts*
 
   Not least, this can take a lot of pressure off the initial page load - the precise issue which led to `Ashiva_Open_Control_Pad` and `Ashiva_Control_Pad` being separated in the first place.
+  
+_____
+
+## Notes (III):
+
+       WHILE PRIMECELLS IN CAPSULEMANIFEST FILES CAN HAVE ANY NAME: `/ashiva-menu/code/markup/button-markup--html.json`
+       PRIMECELLS IN INLINE CAPSULEMANIFESTS ARE IMPLICITLY NAMED AFTER THE CAPSULENAME: `/ashiva-menu/code/markup/ashiva-menu--html.json`
+       IF THE DOCUMENT IS HTML, THE IMPLICIT PRIMECELL WILL BE IN `/markup/`. IF THE DOCUMENT IS SVG, THE IMPLICIT PRIMECELL WILL BE IN `/vectors/`
+       
+       BY THE SAME TOKEN, IMPLICIT HTML INLINE MANIFEST IS: `[#][Markup="SB_NextPage", Styles="SB_NextPage", Scripts="SB_NextPage", Data="SB_NextPage"]`
+       AND THE IMPLICIT SVG INLINE MANIFEST IS: `[#][Vectors="SB_NextPage", Styles="SB_NextPage", Scripts="SB_NextPage", Data="SB_NextPage"]`
+       AND THE SEMI-IMPLICIT INLINE MANIFEST (BELOW) IS: `[#][Markup="SB_NextPage", Styles="SB_NextPage"]`
+
+    - `<SB_nextPage (Scotia_Beauty)>` // *reference to the Implicit **PrimeCell** for an Unmanifested Capsule, with an implicit inline Manifest*
+    - `<SB_nextPage (Scotia_Beauty) [@]Button_Markup>` // *reference to a **Named Cell** for a Unmanifested Capsule, with an (overridden) implicit inline Manifest*
+
+      ^^^ THIS MAKES SENSE ***IF*** AN EXPLICITLY NAMED CELL REFERENCE OVERRIDES AN IMPLICIT INLINE MANIFEST AND VICE VERSA WITH THE IMPLICIT PRIMECELL.
+
+    - `<SB_nextPage (Scotia_Beauty) [#][Markup, Styles]>` // *reference to the Implicit **PrimeCell** for an Unmanifested Capsule*
+    - `<SB_nextPage (Scotia_Beauty) [@]Button_Markup [#][Styles]>` // *reference to a **Named Cell** for an Unmanifested Capsule, with an (overridden) implicit inline Manifest*
   
 _____
 
