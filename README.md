@@ -64,6 +64,27 @@ SIGNIFICANT STEP FORWARD: In front-end capsule references, I wondered if I could
 
 _____
 
+## Further Notes
+
+   - Changed `CustomComponents` to **Namespace-Suffixed CodeCells** to standardise "named cells" & enable formerly unavailable functionality
+     
+     e.g. *before*, a Capsule might have had `['Markup']`, `['Styles']`, `['Scripts']` and then `['Markup'['CustomComponents']['Menu']`
+          *but now*, a Capsule can have `['Markup']['Button_Markup']`, `['Markup']['Menu_Markup']`, `['Styles']['Button_Styles']`, `['Styles']['Menu_Styles']`, `['Scripts']['Button_Scripts']`, `['Scripts']['Menu_Scripts']`, `['Vectors']['Vectors']`
+    
+     Amongst other things, this enables a much more flexible, more sophisticated setup, where, what used to be two separate Capsules:
+
+       - `Ashiva_Open_Control_Pad` for the inital button; and then
+       - `Ashiva_Control_Pad` for the asynchronously loaded interface
+      
+     can now be a *single* Capsule, where, e.g.:
+
+       - `Ashiva_Menu` first loads the intial `Button_Markup`, `Button_Styles` and `Button_Scripts` *CapsuleCells* (according to the initial, static, server-side CapsuleManifest); and later
+       - when the user interacts with the button, the `Button_Scripts` *CapsuleCell* of `Ashiva_Menu` dynamically inserts a `CapsuleReference` into the page (which contains its own inline `CapsuleManifest`) and then parses that `CapsuleReference` which leads to the asynchronous loading of several new `CapsuleCells` from the *same Capsule* (`CapsuleCells` which weren't initially loaded): *menu markup*, *menu styles* and *menu scripts*
+
+  Not least, this can take a lot of pressure off the initial page load - the precise issue which led to `Ashiva_Open_Control_Pad` and `Ashiva_Control_Pad` being separated in the first place.
+  
+_____
+
 ## Danis³h Capsule Reference on the Frontend
 On the *Front End*, within an HTML or SVG Document, the **Danis³h CapsuleReference** described by the *Attribute Notation* above would look like this:
 
