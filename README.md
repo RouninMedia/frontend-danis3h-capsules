@@ -105,6 +105,20 @@ AND THE SEMI-IMPLICIT INLINE MANIFEST (BELOW) IS: `[#][Markup="SB_NextPage", Sty
 
 _____
 
+## QUESTION TO ANSWER
+
+Does an explicit inline CapsuleManifest replace _all_ of the implicit CapsuleManifest?
+
+Or do the cells absent from the explicit inline CapsuleManifest default to implicit references?
+
+If the latter, what difference between: `[#][Markup="Ashiva_Menu_Button", Styles, Scripts]` and `[#][Markup="Ashiva_Menu_Button"]`?
+
+If the former, do we need the negation marker `!` in inline Manifests?
+
+If we don't need the negation marker `!` in inline Manifests, how can it be written better than `[!@]` to negate the `PrimeCell`
+
+_____
+
 ## Notes (IV):
 
   - ***Capsule Reference***: `<Ash_My_Capsule (Ash:My_Imprint) [#][Markup="Navigation" Styles="Navigation"]>`
