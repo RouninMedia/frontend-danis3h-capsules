@@ -102,6 +102,18 @@ AND THE SEMI-IMPLICIT INLINE MANIFEST (BELOW) IS: `[#][Markup="SB_NextPage", Sty
 
   - `<SB_nextPage (Scotia_Beauty) [#][Markup, Styles]>` // *reference to the Implicit **PrimeCell** for an Unmanifested Capsule*
   - `<SB_nextPage (Scotia_Beauty) [@]Button_Markup [#][Styles]>` // *reference to a **Named Cell** for an Unmanifested Capsule, with an (overridden) implicit inline Manifest*
+
+_____
+
+## Notes (IV):
+
+  - ***Capsule Reference***: `<Ash_My_Capsule (Ash:My_Imprint) [#][Markup="Navigation" Styles="Navigation"]>`
+  - ***Cell Inspection 1***: `inspectCapsuleCell('<Ash_My_Capsule (Ash:My_Imprint) [@]Markup="Navigation">');`
+  - ***Cell Inspection 2***: `inspectCapsuleCell('<Ash_My_Capsule (Ash:My_Imprint) [@]Styles="Navigation">');`
+  - ***Cell Inspection 3***: `inspectCapsuleCell('<SB_Translations (Scotia_Beauty) [@]Markup="Nail_Products_Menu_ES__PUG">');`
+  - ***Cell Inspection 4***: `inspectCapsuleCell('<SB_Translations (Scotia_Beauty) [@]Markup="nail-products-menu-es--pug">');`
+  - ***Cell Inspection 5***: `inspectCapsuleCell('<SB_Translations (Scotia_Beauty) [@]Markup="Menu___Speisekarte___Bar___Nail_Products_Menu_ES">');`
+  - ***Cell Inspection 6***: `inspectCapsuleCell('<SB_Translations (Scotia_Beauty) [@]Markup="menu/speisekarte/bar/nail-products-menu-es">');`
   
 _____
 
