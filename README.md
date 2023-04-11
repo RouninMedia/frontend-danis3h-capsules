@@ -230,8 +230,6 @@ The null value `[/]` will do that. It can be used like this:
 
 Although an entirely omitted **CapsuleManifest** leads to *four default values* being implied, any *explicitly* declared **CapsuleManifest** has, by contrast, **no implied values** at all. It references only those values it includes. However, simply listing the `CellType` is a sufficient shorthand for any cell which would have been implied, if the **CapsuleManifest** were entirely omitted.
 
-
-```
 So, whereas, with the now-deprecated *negation*, we would have written:
 
 ```html
