@@ -222,7 +222,7 @@ so there *needs* to be a way to indicate that there is actually no `PrimeCell`.
 
 The null value `[/]` will do that. It can be used like this:
 
-  - `<CX_My_Capsule (Capsule_Examples) [@][/]>`
+  - `<CX_My_Capsule (Capsule_Examples) [/]>`
   - `<CX_My_Capsule (Capsule_Examples) [@]Markup=[/]>`
     
 
