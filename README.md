@@ -105,22 +105,6 @@ AND THE SEMI-IMPLICIT INLINE MANIFEST (BELOW) IS: `[#][Markup="SB_NextPage", Sty
 
 _____
 
-## QUESTIONS TO ANSWER
-
-*Does an explicit inline CapsuleManifest replace _all_ of the implicit CapsuleManifest?*
-
-*Or do the cells absent from the explicit inline CapsuleManifest default to implicit references?*
-
-*If the latter, what difference between: `[#][Markup="Ashiva_Menu_Button", Styles, Scripts]` and `[#][Markup="Ashiva_Menu_Button"]`?*
-
-*If the former, do we need the negation marker `!` in inline Manifests?*
-
-*If we don't need the negation marker `!` in inline Manifests, how can it be written better than `[!@]` to negate the `PrimeCell`*
-
-*Something like: `[/]` ??*
-
-_____
-
 ## Notes (IV):
 
   - ***Capsule Reference***: `<Ash_My_Capsule (Ash:My_Imprint) [#][Markup="Navigation" Styles="Navigation"]>`
@@ -219,9 +203,43 @@ Thus, instead of:
 It will suffice to write:
     
     <!--[<CX_My_Capsule (Capsule_Examples) [&]scan="CX_Button">]-->
+    
+_____
+    
+### When there is no PrimeCell
+Omission of `[@]` automatically implies: `[@]Markup="CX_My_Capsule__HTML" so there needs to be a way to indicate that there is actually no `PrimeCell`.
 
-### Negation in front-end CapsuleReferences (`!`)
-Since any omission to declare **PrimeCell** or **CapsuleManifest** values leads to default values being implied, we need an explicit way to indicate that values don't actually exist and are not being invoked at all.
+The shorthand `[@]Markup=[/]` or `[@][/]` will do that.
+
+____
+
+
+
+
+## QUESTIONS TO ANSWER
+
+*Does an explicit inline CapsuleManifest replace _all_ of the implicit CapsuleManifest?*
+
+*Or do the cells absent from the explicit inline CapsuleManifest default to implicit references?*
+
+*If the latter, what difference between: `[#][Markup="Ashiva_Menu_Button", Styles, Scripts]` and `[#][Markup="Ashiva_Menu_Button"]`?*
+
+*If the former, do we need the negation marker `!` in inline Manifests?*
+
+*If we don't need the negation marker `!` in inline Manifests, how can it be written better than `[!@]` to negate the `PrimeCell`*
+
+*Something like: `[/]` ??*
+
+_____
+
+
+### Negation in front-end CapsuleReferences (`!`) (Deprecated)
+Although an entirely omitted **CapsuleManifest** leads to four default values being implied, any explicitly declared **CapsuleManifest**
+
+
+
+
+way to indicate that values don't actually exist and are not being invoked at all.
 
 In ***CapsuleReference** Syntax* a non-existent value is indicated via a `!` prefix.
 
