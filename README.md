@@ -223,59 +223,32 @@ so there *needs* to be a way to indicate that there is actually no `PrimeCell`.
 The shorthand `[@]Markup=[/]` or `[@][/]` will do that:
 
     <CX_My_Capsule (Capsule_Examples) [@][/]>
+    
 
 #### When a CapsuleManifest Cell does not exist
 
-Although an entirely omitted **CapsuleManifest** leads to four default values being implied, any explicitly declared **CapsuleManifest** has **no implied values** at all. It references only those values it includes. However, simply listing the `CellType` is a sufficient shorthand for any cell which would have been implied, if the **CapsuleManifest** were entirely omitted.
+Although an entirely omitted **CapsuleManifest** leads to *four default values* being implied, any explicitly declared **CapsuleManifest** has **no implied values** at all. It references only those values it includes. However, simply listing the `CellType` is a sufficient shorthand for any cell which would have been implied, if the **CapsuleManifest** were entirely omitted.
 
 
-
-
-way to indicate that values don't actually exist and are not being invoked at all.
-
-
-
-This enables a **CapsuleReference** which explicitly has no **PrimeCell** to be written out like this:
-
-```html
-<!--[<CX_My_Capsule (Capsule_Examples) [!@]>]-->
 ```
-
-If, instead, we wrote out:
-
-```html
-<!--[<CX_My_Capsule (Capsule_Examples)>]-->
-```
-
-this would be the equivalent of:
-
-```html
-<!--[<CX_My_Capsule (Capsule_Examples) [@]Markup="CX_My_Capsule__HTML">]-->
-```
-
-We can use the same negation syntax in an inline **CapsuleManifest**:
+So, whereas, with *negation*, we would write:
 
 ```html
 <!--[<CX_My_Capsule (Capsule_Examples) [#][!Markup, Scripts="CX_My_Other_Capsule", !Data]>]-->
 ```
 
-The line above references these two **CapsuleCells**, one explicitly, the other implicitly:
+which references **two CapsuleCells**, one explicitly, the other implicitly:
 
  - `Styles="CX_My_Capsule"`
  - `Scripts="CX_My_Other_Capsule"`
 
-
-If, instead, we wrote out *only*:
-
-```html
-<!--[<CX_My_Capsule (Capsule_Examples) [#][Scripts="CX_My_Other_Capsule"]>]-->
-```
-
-this would be the equivalent of:
+With *negation* now removed, we would write:
 
 ```html
-<!--[<CX_My_Capsule (Capsule_Examples) [#][Markup="CX_My_Capsule", Styles="CX_My_Capsule", Scripts="CX_My_Other_Capsule", Data="CX_My_Capsule"]>]-->
+<!--[<CX_My_Capsule (Capsule_Examples) [#][Styles, Scripts="CX_My_Other_Capsule"]>]-->
 ```
+
+which is arguably much more intuitive.
     
 ______
     
