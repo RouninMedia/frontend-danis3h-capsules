@@ -204,44 +204,36 @@ It will suffice to write:
     
     <!--[<CX_My_Capsule (Capsule_Examples) [&]scan="CX_Button">]-->
     
-_____
-    
-### When there is no PrimeCell
-Omission of `[@]` automatically implies: `[@]Markup="CX_My_Capsule__HTML" so there needs to be a way to indicate that there is actually no `PrimeCell`.
-
-The shorthand `[@]Markup=[/]` or `[@][/]` will do that.
-
 ____
 
+### Replacing Negation in front-end CapsuleReferences (`!`)
+Briefly (in early April 2023), there was an idea that a non-existent value would be indicated via a `!` prefix in ***CapsuleReference** Syntax*.
 
+This idea of how to convey Negation has now been discarded.
 
+Here is how it has been replaced:
 
-## QUESTIONS TO ANSWER
+#### When the PrimeCell does not exist
+If `<CX_My_Capsule (Capsule_Examples)>` does not contain a `[@]`-prefixed attribute, this automatically implies:
 
-*Does an explicit inline CapsuleManifest replace _all_ of the implicit CapsuleManifest?*
+    <CX_My_Capsule (Capsule_Examples) [@]Markup="CX_My_Capsule__HTML">
+    
+so there *needs* to be a way to indicate that there is actually no `PrimeCell`.
 
-*Or do the cells absent from the explicit inline CapsuleManifest default to implicit references?*
+The shorthand `[@]Markup=[/]` or `[@][/]` will do that:
 
-*If the latter, what difference between: `[#][Markup="Ashiva_Menu_Button", Styles, Scripts]` and `[#][Markup="Ashiva_Menu_Button"]`?*
+    <CX_My_Capsule (Capsule_Examples) [@][/]>
 
-*If the former, do we need the negation marker `!` in inline Manifests?*
+#### When a CapsuleManifest Cell does not exist
 
-*If we don't need the negation marker `!` in inline Manifests, how can it be written better than `[!@]` to negate the `PrimeCell`*
-
-*Something like: `[/]` ??*
-
-_____
-
-
-### Negation in front-end CapsuleReferences (`!`) (Deprecated)
-Although an entirely omitted **CapsuleManifest** leads to four default values being implied, any explicitly declared **CapsuleManifest**
+Although an entirely omitted **CapsuleManifest** leads to four default values being implied, any explicitly declared **CapsuleManifest** has **no implied values** at all. It references only those values it includes. However, simply listing the `CellType` is a sufficient shorthand for any cell which would have been implied, if the **CapsuleManifest** were entirely omitted.
 
 
 
 
 way to indicate that values don't actually exist and are not being invoked at all.
 
-In ***CapsuleReference** Syntax* a non-existent value is indicated via a `!` prefix.
+
 
 This enables a **CapsuleReference** which explicitly has no **PrimeCell** to be written out like this:
 
