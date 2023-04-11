@@ -220,18 +220,19 @@ If `<CX_My_Capsule (Capsule_Examples)>` does not contain a `[@]`-prefixed attrib
     
 so there *needs* to be a way to indicate that there is actually no `PrimeCell`.
 
-The shorthand `[@]Markup=[/]` or `[@][/]` will do that:
+The null value `[/]` will do that. It can be used like this:
 
-    <CX_My_Capsule (Capsule_Examples) [@][/]>
+  - `<CX_My_Capsule (Capsule_Examples) [@][/]>`
+  - `<CX_My_Capsule (Capsule_Examples) [@]Markup=[/]>`
     
 
 #### When a CapsuleManifest Cell does not exist
 
-Although an entirely omitted **CapsuleManifest** leads to *four default values* being implied, any explicitly declared **CapsuleManifest** has **no implied values** at all. It references only those values it includes. However, simply listing the `CellType` is a sufficient shorthand for any cell which would have been implied, if the **CapsuleManifest** were entirely omitted.
+Although an entirely omitted **CapsuleManifest** leads to *four default values* being implied, any *explicitly* declared **CapsuleManifest** has, by contrast, **no implied values** at all. It references only those values it includes. However, simply listing the `CellType` is a sufficient shorthand for any cell which would have been implied, if the **CapsuleManifest** were entirely omitted.
 
 
 ```
-So, whereas, with *negation*, we would write:
+So, whereas, with the now-deprecated *negation*, we would have written:
 
 ```html
 <!--[<CX_My_Capsule (Capsule_Examples) [#][!Markup, Scripts="CX_My_Other_Capsule", !Data]>]-->
@@ -242,7 +243,7 @@ which references **two CapsuleCells**, one explicitly, the other implicitly:
  - `Styles="CX_My_Capsule"`
  - `Scripts="CX_My_Other_Capsule"`
 
-With *negation* now removed, we would write:
+We now write:
 
 ```html
 <!--[<CX_My_Capsule (Capsule_Examples) [#][Styles, Scripts="CX_My_Other_Capsule"]>]-->
